@@ -1,9 +1,3 @@
-¡Claro\! Un buen `README` es la tarjeta de presentación de tu proyecto. Para tu repositorio `mern-crud`, un README efectivo debe explicar qué hace el proyecto, qué tecnologías usa y, lo más importante, cómo instalarlo y ejecutarlo.
-
-Aquí tienes una propuesta completa y bien estructurada. Solo tienes que copiar y pegar este contenido en un nuevo archivo llamado `README.md` en la raíz de tu proyecto en GitHub.
-
------
-
 # Aplicación CRUD de Usuarios (Stack MERN)
 
 Este es un proyecto educativo diseñado para demostrar las operaciones básicas **CRUD** (Crear, Leer, Actualizar, Eliminar) utilizando el stack **MERN**: MongoDB, Express, React y Node.js.
