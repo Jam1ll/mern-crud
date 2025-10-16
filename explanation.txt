@@ -1,0 +1,31 @@
+SERVER.JS es la base principal del backend con EXPRESS.JS.
+
+Primero se debe traer desde la librería CommonJS el modulo
+en cuestión (express), alojándolo en una constante.
+
+    Ejemplo: const EXPRESS = require('express);
+
+    [require() es una función integrada en Node.js que nos permite traer módulos]
+
+--------------------------------------------------------------------------------------
+
+Ulteriormente, debemos instanciar el módulo de express. Esta instancia recibe
+el nombre de 'app'.
+
+    Ejemplo: const app = EXPRESS()
+
+    [app controla las respuestas del servidor ante distintas peticones url]
+
+--------------------------------------------------------------------------------------
+
+Para usar una base de datos, usamos la función integrada de Node.js para importar el módulo.
+
+    Ejemplo: const DB = require('insertar ruta')
+
+--------------------------------------------------------------------------------------
+
+Ahora es momento de utilizar la instancia del módulo express.
+Necesitamos re-dirigir las rutas que envíe el cliente hacia las de nuestro sistema
+para establecer la conexión ante las peticiones HTTP.
+Para ello, debemos 'montar' el router (el conjunto de instrucciones)  
+

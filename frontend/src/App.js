@@ -39,7 +39,7 @@ function App() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="AgregarUsuario">
+                <a className="nav-link" href="agregar-usuario">
                   Agregar Usuario
                 </a>
               </li>
@@ -57,7 +57,7 @@ function App() {
             exact
           ></Route>
           <Route
-            path="/editar-usuario"
+            path="/editar-usuario/:idUsuario"
             element={<EditarUsuario />}
             exact
           ></Route>

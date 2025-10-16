@@ -22,4 +22,9 @@
 1. Importar Bootstrap o algun otro framework para estilos. Asumiremos Bootstrap
 2. Pegar el siguiente enlace en public/index.html antes del head: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 3. Buscar componentes ya hechos en bootstrap y editar a gusto (por ejemplo, un navbar oscuro)
-4. ...
+
+### BACKEND (2)
+
+1. Crear carpeta de rutas y completar con modelos y rutas de bd
+2. Importar rutas en server.js
+3. Importar uniqid y axios en frontend, body-parser en backend
