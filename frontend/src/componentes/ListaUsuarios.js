@@ -8,6 +8,9 @@ function ListaUsuarios() {
   // Hook: funciones especiales de React que facilitan el uso de modelos en los componentes
   //
   const [dataUsuarios, setDataUsuario] = useState([]); //lista vacia
+  //
+  //
+  //
 
   //1. usar axios para obtener la data
   useEffect(() => {

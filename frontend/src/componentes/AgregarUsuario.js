@@ -10,6 +10,9 @@ function AgregarUsuario() {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
+  //
+  //
+  //
 
   //metodo para insercion de datos
   function agregarUsuario() {
@@ -21,9 +24,14 @@ function AgregarUsuario() {
     };
     console.log(usuario);
     axios
-      .post("http://localhost:5000/api/usuario/agregar-usuario", usuario)
+      .post("/api/usuario/agregar-usuario", usuario)
       .then((res) => {
-        alert(res.data);
+        const data = res.data;
+        if (data) {
+          console.log(data);
+          alert("datos guardados");
+        }
+        window.location.href = "/";
       })
       .catch((err) => {
         console.log(err);

@@ -26,7 +26,7 @@ const ModeloUsuario = mongoose.model("usuarios", schemaUsuario);
 //
 
 //
-// GET
+// GET ALL
 //
 
 router.get("/obtener-usuarios", async (req, res) => {
@@ -34,6 +34,24 @@ router.get("/obtener-usuarios", async (req, res) => {
     //guardar los datos en una variable
     const response = await ModeloUsuario.find({}); //recordar el await
     res.json(response); //en vez de res.send(usuarios), ya que es mejor .json() para APIs
+
+    //en caso de error
+  } catch (error) {
+    console.error("error al obtener usuarios: ", error);
+    res.status(500).json({ errorMessage: "error al obtener usuarios" });
+  }
+});
+
+//
+// GET BY ID
+//
+
+router.post("/obtener-data-usuario", async (req, res) => {
+  try {
+    const response = await ModeloUsuario.find({
+      idUsuario: req.body.idUsuario, //getById
+    });
+    res.json(response);
 
     //en caso de error
   } catch (error) {
@@ -64,6 +82,49 @@ router.post("/agregar-usuario", async (req, res) => {
   } catch (error) {
     console.error("Error al guardar el usuario:", error);
     res.status(500).json({ errorMessage: "Error al agregar usuario" });
+  }
+});
+
+//
+// POST
+//
+
+router.post("/actualizar-usuario", async (req, res) => {
+  try {
+    await ModeloUsuario.findOneAndUpdate(
+      { idUsuario: req.body.idUsuario },
+      {
+        nombre: req.body.nombre,
+        email: req.body.email,
+        telefono: req.body.telefono,
+      }
+    );
+
+    res.json({ message: "Usuario editado correctamente" });
+    //si hay un error, se atrapa y muestra
+  } catch (error) {
+    console.error("Error al guardar el usuario:", error);
+    res.status(500).json({ errorMessage: "Error al agregar usuario" });
+  }
+});
+
+//
+// DELETE
+//
+
+router.post("/eliminar-usuario", async (req, res) => {
+  try {
+    result = await ModeloUsuario.findOneAndDelete({
+      idUsuario: req.body.idUsuario,
+    });
+    //verificar si se borro algo
+    if (!result) {
+      return res.status(404).json({ errorMessage: "Usuario no encontrado" });
+    }
+    res.json({ message: "Usuario eliminado correctamente" });
+  } catch (error) {
+    console.error("Error al eliminar el usuario: ", error);
+    res.status(500).json({ errorMessage: "Error al eliminar usuario" });
   }
 });
 
