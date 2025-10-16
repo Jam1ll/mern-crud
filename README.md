@@ -4,8 +4,6 @@ Este es un proyecto educativo diseñado para demostrar las operaciones básicas 
 
 La aplicación permite gestionar una lista de usuarios, donde se puede agregar nuevos usuarios, ver la lista completa, editar la información de un usuario existente y eliminarlo.
 
-> 💡 **Sugerencia:** Graba un GIF corto que muestre cómo funciona la aplicación (agregando, editando y eliminando un usuario) y ponlo aquí. Esto hace que tu proyecto sea mucho más atractivo.
-
 -----
 
 ## 🛠️ Tecnologías Utilizadas
