@@ -38,8 +38,6 @@ El proyecto está dividido en dos partes principales: el cliente (frontend) y el
 
 ## 🚀 Instalación y Puesta en Marcha
 
-Sigue estos pasos para ejecutar el proyecto en tu máquina local.
-
 ### **Pre-requisitos**
 
 Asegúrate de tener instalado lo siguiente:
@@ -87,8 +85,6 @@ Asegúrate de tener instalado lo siguiente:
         ```
       * La aplicación se abrirá automáticamente en tu navegador en `http://localhost:3000`.
 
-¡Y listo\! Ya puedes interactuar con la aplicación en tu entorno local.
-
 -----
 
 ## 📂 Estructura del Proyecto
@@ -110,7 +106,7 @@ mern-crud/
 
 -----
 
-## 📝 Endpoints de la API
+## 📝 Endpoints
 
 La API del backend expone las siguientes rutas:
 
@@ -125,8 +121,6 @@ La API del backend expone las siguientes rutas:
 -----
 
 ## 🔮 Posibles Mejoras
-
-Este es un proyecto base. Algunas ideas para extenderlo son:
 
   - [ ] Implementar validación de datos en el backend y en los formularios del frontend.
   - [ ] Añadir un sistema de autenticación de usuarios (login/registro).
